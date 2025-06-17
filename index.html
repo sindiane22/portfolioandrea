@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrea Avi - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">   
+</head>
+<body>
+  <header>
+    <div style="padding-left: 80px;">
+        <H1>Andrea Avi</H1 ></div>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#projets">Mes projets</a>
+      <a href="#competences">Mes compétences</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- SECTION ACCUEIL -->
+  <section id="accueil" style="background-color: var(--bg-light);">
+    <BR>
+    <div class="two-columns">
+      <div>
+        <h1 style="color: #8a2a6a;">Web designer</h1>
+        <br>
+        <p>Web designer passionné, je transforme vos idées en expériences visuelles uniques et intuitives. Explorez mon univers créatif et découvrez comment je peux donner vie à votre projet.</p>
+        <br>
+        <button class="btn" onclick="document.getElementById('projets').scrollIntoView({ behavior: 'smooth' });">Voir mes projets</button>
+      </div>
+      <div>
+        <BR>
+        </BR>
+        <BR>
+        </BR>
+        <img src="https://drive.google.com/file/d/1LB28rkJJZ09pw-CTcjK_Zb2MFqt87rCI/view?usp=drive_link" alt="Image accueil">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION A PROPOS -->
+  <section id="apropos" style="background-color: var(--bg-very-light);">
+    <h2>À propos</h2>
+    <div class="two-columns">
+      <div>
+        <p>Je suis Andrea Avi, créatif, curieuse et passionnée. Ma mission : concevoir des interfaces esthétiques, modernes et adaptées aux besoins de chaque utilisateur. Besoin d’un esprit design et technique ? Je suis la personne qu’il vous faut.</p>
+        <br>
+     <a href="https://drive.google.com/file/d/1SgzFgZmFBdFhU1j1VEz7_PzdxA97axNr/view?usp=drive_link" download class="btn">Télécharger mon CV</a>
+      </div>
+      <div>
+        <img src="https://drive.google.com/file/d/1qg6faeRelKdResUsurLuvRxoLgBDVX1R/view?usp=sharing" alt="Photo de profil" style="border-radius: 50px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION MES COMPETENCES -->
+  <section id="competences" style="background-color: var(--bg-light);">
+    <h2>Mes compétences</h2>
+    <div class="two-columns">
+      <div class="skills">
+        <div class="skill">
+          <p>Gestion de projet</p>
+          <div class="bar"><div class="bar-fill" style="width: 80%;"></div></div>
+        </div>
+        <div class="skill">
+          <p>Créativité</p>
+          <div class="bar"><div class="bar-fill" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill">
+          <p>Travail d'équipe</p>
+          <div class="bar"><div class="bar-fill" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill">
+          <p>Esprit d'initiative</p>
+          <div class="bar"><div class="bar-fill" style="width: 75%;"></div></div>
+        </div>
+      </div>
+      <div class="languages">
+        <div class="language">
+          <p>HTML</p>
+          <div class="bar"><div class="bar-fill" style="width: 90%;"></div></div>
+        </div>
+        <div class="language">
+          <p>CSS</p>
+          <div class="bar"><div class="bar-fill" style="width: 85%;"></div></div>
+        </div>
+        <div class="language">
+          <p>JavaScript</p>
+          <div class="bar"><div class="bar-fill" style="width: 70%;"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SECTION MES PROJETS -->
+  <section id="projets" style="background-color: var(--bg-very-light);">
+    <h2>Mes projets</h2>
+    <div class="projects">
+      <div class="project">
+
+        <!-- jeu age -->
+        <h3>Mini jeu 1 : Âge</h3>
+        <p>Un programme qui demande l'âge de l'utilisateur et affiche s'il est majeur ou mineur.</p> 
+        <BR>
+        </BR>
+        <a href="C:\Users\Lenovo\OneDrive\Bureau\TEST PROJET\quel est votre age.html" class="btn">voir plus</a>
+      </div>
+        <!-- jeu nombre -->
+      <div class="project">
+        <h3>Mini jeu 2 : Pair ou impair</h3>
+        <p>Un programme qui détermine si un nombre est pair ou impair.</p>
+        <BR>
+        </BR>
+        <a href="C:\Users\Lenovo\OneDrive\Bureau\TEST PROJET\ENTRER UN MONBRE.html" class="btn">Voir plus</a>
+      </div>
+      <!-- jeu mois -->
+      <div class="project">
+        <h3>Mini jeu 3 : Mois</h3>
+        <p>Un programme qui affiche le mois à partir du numéro saisi.</p>
+        <BR>
+        </BR>
+        <a href="C:\Users\Lenovo\OneDrive\Bureau\TEST PROJET\mois actuel.html" class="btn">Voir plus</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <p>Un projet en tête ? Envie de collaborer ?<br>
+    N'hésitez pas à me laisser un message ! Je suis à l'écoute de vos idées et prêt à concevoir des solutions sur-mesure.<br>
+    Parlons-en !</p>
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Votre message a bien été enregistré');">
+      <input type="text" placeholder="Nom" required />
+      <input type="text" placeholder="Prénom" required />
+      <input type="text" placeholder="Sujet" required />
+      <textarea rows="5" placeholder="Message" required></textarea>
+      <button class="btn" type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <div>Tout droit réservé - 2025</div>
+    <div>Designer par Andrea Avi</div>
+  </footer>
+</body>
+</html>

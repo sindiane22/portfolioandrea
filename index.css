@@ -1,0 +1,143 @@
+:root {
+      --primary-color: #B33791;
+      --bg-light: #F7EBF4;
+      --bg-very-light: #ffffff;
+    }
+    * {
+      margin: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 35px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      
+    }
+    section {
+      padding: 70px;
+    }
+    h2 {
+      text-align: center;
+      color: var(--primary-color);
+      font-weight: bolder;
+      margin-bottom: 2rem;
+      font-size: xx-large;
+    }
+    .btn {
+      display: inline-block;
+  padding: 10px 20px;
+  background-color: #B33791;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #8a2a6a;
+  transform: scale(1.05);
+    }
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .two-columns > div {
+      flex: 1;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .project {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .skills, .languages {
+      margin-bottom: 2rem;
+    }
+    .skill, .language {
+      margin-bottom: 1rem;
+    }
+    .bar {
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      background: var(--primary-color);
+      height: 20px;
+      width: 0%;
+      border-radius: 10px;
+      transition: width 1s ease-in-out;
+    }
+    .contact-section {
+      background-color: var(--bg-light);
+      text-align: center;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 2rem auto;
+      border: 1px solid var(--primary-color);
+      padding: 2rem;
+      border-radius: 10px;
+      background-color: white;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 10px;
+      border: 1px solid var(--primary-color);
+      font-family: 'Poppins', sans-serif;
+    }
+    .contact-form button {
+      align-self: center;
+    }
+    footer {
+      background: var(--primary-color);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    @media (max-width: 768px) {
+      .two-columns {
+        flex-direction: column;
+      }
+    }
+    nav {
+
+      padding-right: 100px;  
+    }
+   a:hover {
+  text-decoration: underline;
+}
