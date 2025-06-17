@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaires interactifs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf0f7;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #B33791;
+      margin-top: 40px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #B33791;
+      border-radius: 8px;
+      width: 250px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #B33791;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #9a2c79;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .section {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 20px 0;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h1>Quel est le mois actuel ?</h1>
+    <input type="number" id="moisInput" placeholder="Entrez un numéro de mois (1-12)">
+    <button onclick="afficherMois()">Afficher</button>
+    <p id="year"></p>
+  </div>
+
+  <script>
+    function afficherMois() {
+      const mois = parseInt(document.getElementById("moisInput").value);
+      const nomsMois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+      if (mois >= 1 && mois <= 12) {
+        document.getElementById("year").textContent = "Le mois est : " + nomsMois[mois - 1];
+      } else {
+        document.getElementById("year").textContent = "Numéro de mois invalide.";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaires interactifs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf0f7;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #B33791;
+      margin-top: 40px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #B33791;
+      border-radius: 8px;
+      width: 250px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #B33791;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #9a2c79;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .section {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 20px 0;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <h1>Quel est votre âge ?</h1>
+    <input type="number" id="ageInput" placeholder="Entrez votre âge">
+    <button onclick="verifierAge()">Vérifier</button>
+    <p id="votreage"></p>
+  </div>
+
+ 
+  <script>
+    function verifierAge() {
+      const age = document.getElementById("ageInput").value;
+      const resultat = age < 18 ? "Vous êtes mineur." : "Vous êtes majeur.";
+      document.getElementById("votreage").textContent = resultat;
+    }
+
+  </script>
+
+</body>
+</html>
